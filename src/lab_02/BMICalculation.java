@@ -2,7 +2,7 @@ package lab_02;
 
 import java.util.Scanner;
 
-public class CalculateBMI {
+public class BMICalculation {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
