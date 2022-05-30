@@ -5,34 +5,28 @@ import java.util.Arrays;
 public class SelectionSort {
 
     public static void main(String[] args) {
-        int[] intArr = {12,34,1,16,28};
-        System.out.println(Arrays.toString(intArr));
+        System.out.println(Arrays.toString(selectionSortAlgo(null)));
+        System.out.println(Arrays.toString(selectionSortAlgo(new int[] {5})));
+        System.out.println(Arrays.toString(selectionSortAlgo(new int[] {12, 34, 1, 16, 28})));
+    }
 
-        int min, pos, temp;
+    public static int[] selectionSortAlgo(int[] intArr) {
+        if(intArr==null || intArr.length==0 || intArr.length==1)
+            return intArr;
 
-        for(int i = 0; i<intArr.length - 1; i++){
-            min = intArr[i];
-            pos = i;
-            for(int j=i+1; j<intArr.length; j++){
-                if(intArr[j] < min){
-                    min = intArr[j];
-                    pos = j;
+        int minValue,minPos,temp;
+        for (int i = 0; i < intArr.length - 1; i++) {
+            minPos = i;
+            for (int j = i + 1; j < intArr.length; j++) {
+                if (intArr[j] < intArr[minPos]) {
+                    minPos = j;
                 }
             }
+            temp = intArr[i];
+            intArr[i]=intArr[minPos];
+            intArr[minPos]=temp;
 
-            //update positions in array, update array.
-            intArr = swap(intArr,i,pos);
-            System.out.println(Arrays.toString(intArr));
         }
-
+        return intArr;
     }
-
-    public static int[] swap(int[] arrs, int a, int b){
-        int temp;
-        temp = arrs[b];
-        arrs[b]=arrs[a];
-        arrs[a]=temp;
-        return arrs;
-    }
-
 }
