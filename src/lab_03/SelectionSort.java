@@ -8,6 +8,7 @@ public class SelectionSort {
         System.out.println(Arrays.toString(selectionSortAlgo(null)));
         System.out.println(Arrays.toString(selectionSortAlgo(new int[] {5})));
         System.out.println(Arrays.toString(selectionSortAlgo(new int[] {12, 34, 1, 16, 28})));
+        System.out.println(Arrays.toString(selectionSortAlgo(new int[] {28, 34, 1, 16, 28, 1, 5})));
     }
 
     public static int[] selectionSortAlgo(int[] intArr) {
