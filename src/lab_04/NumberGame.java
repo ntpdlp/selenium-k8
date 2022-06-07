@@ -42,6 +42,7 @@ public class NumberGame {
                 System.out.println("Please enter 1, 2, 3 or 4 only");
         }
 
+
     }
 
     private static boolean searchNumber(List<Integer> nums, int searchNum) {
