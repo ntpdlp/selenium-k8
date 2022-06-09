@@ -1,9 +1,7 @@
  package lab_06;
 
-import java.util.Arrays;
-
-//lab6.1
-public class MinutesCalculation2 {
+ //lab6.1
+public class CharacterWrapper {
     public static void main(String[] args) {
 
         calculate("123myPaSSw0rd");
