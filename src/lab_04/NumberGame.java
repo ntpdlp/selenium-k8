@@ -14,41 +14,50 @@ public class NumberGame {
             nums.add(new SecureRandom().nextInt(100));
         }
 
+        boolean isContinue = true;
+        while(isContinue){
+            printMenu();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Your choice: ");
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println(nums);
+                    break;
+                case 2:
+                    printMax(nums);
+                    break;
+                case 3:
+                    printMin(nums);
+                    break;
+                case 4:
+                    System.out.println("Enter your search number: ");
+                    int searchNum = scanner.nextInt();
+                    System.out.println(searchNumber(nums, searchNum) ? "Found" : "No Found" + " in the list: " + nums);
+                    break;
+                case 5:
+                    isContinue=false;
+                    System.out.println("See ya !!");
+                    break;
+                default:
+                    System.out.println("Please enter 1, 2, 3 or 4 only");
+            }
+        }
+    }
+
+    private static void printMenu() {
         System.out.println("========== MENU ===========");
         System.out.println("1. Print all numbers");
         System.out.println("2. Print maximum value");
         System.out.println("3. Print minimum value");
         System.out.println("4. Search number");
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Your choice: ");
-        int choice = scanner.nextInt();
-        switch (choice){
-            case 1:
-                System.out.println(nums);
-                break;
-            case 2:
-                printMax(nums);
-                break;
-            case 3:
-                printMin(nums);
-                break;
-            case 4:
-                System.out.println("Enter your search number: ");
-                int searchNum = scanner.nextInt();
-                System.out.println(searchNumber(nums,searchNum)?"Found":"No Found" + " in the list: " + nums);
-                break;
-            default:
-                System.out.println("Please enter 1, 2, 3 or 4 only");
-        }
-
-
+        System.out.println("5. Exit");
     }
 
     private static boolean searchNumber(List<Integer> nums, int searchNum) {
         int min = nums.get(0);
         for (Integer num : nums) {
-            if(searchNum==num) return true;
+            if (searchNum == num) return true;
         }
         return false;
     }
@@ -56,7 +65,7 @@ public class NumberGame {
     private static void printMin(List<Integer> nums) {
         int min = nums.get(0);
         for (Integer num : nums) {
-            if(min>num) min=num;
+            if (min > num) min = num;
         }
         System.out.println("Min :" + min + " in the list : " + nums);
     }
@@ -64,7 +73,7 @@ public class NumberGame {
     private static void printMax(List<Integer> nums) {
         int max = nums.get(0);
         for (Integer num : nums) {
-            if(max<num) max=num;
+            if (max < num) max = num;
         }
         System.out.println("Max :" + max + " in the list : " + nums);
     }
