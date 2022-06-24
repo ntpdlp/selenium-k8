@@ -6,19 +6,16 @@ public class Animal {
 
     private int speedRacing;
 
-    public Animal(){}
+    public Animal() {
+    }
 
-    public Animal(int limit){
-        setSpeedRacing(limit);
+    public Animal(int limit) {
+        this.speedRacing = speed(limit);
 
     }
 
-    public int speed(int limit){
+    public int speed(int limit) {
         return new SecureRandom().nextInt(limit);
-    }
-
-    public void setSpeedRacing(int speedRacing) {
-        this.speedRacing = speed(speedRacing);
     }
 
     public int getSpeedRacing() {

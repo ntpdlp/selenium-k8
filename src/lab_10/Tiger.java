@@ -4,7 +4,8 @@ import java.security.SecureRandom;
 
 public class Tiger extends Animal {
 
-    public Tiger(){}
+    public Tiger() {
+    }
 
     @Override
     public int speed() {
