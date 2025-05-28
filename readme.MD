@@ -20,6 +20,9 @@ echo "#git example" >> README.md
 =========================================
 
 PUSH AN EXISTING REPOSITORY 
+
 4. git remote add origin https://github.com/ntpdlp/selenium-k8
+
 5. git branch -M main
+
 6. git push -u origin main
