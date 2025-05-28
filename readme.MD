@@ -6,6 +6,7 @@ On your first working day, you need to PULL code from master to you local-branch
 
 
 ==================================
+
 CREATE A NEW REPOSITORY ON THE COMMAND LINE:
 echo "#git example" >> README.md
 1. git init
@@ -17,6 +18,7 @@ echo "#git example" >> README.md
 
 
 =========================================
+
 PUSH AN EXISTING REPOSITORY 
 4. git remote add origin https://github.com/ntpdlp/selenium-k8
 5. git branch -M main
